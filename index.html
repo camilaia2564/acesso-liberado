@@ -1,12 +1,10 @@
-ACESSO="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACESSO AO LINK LIBERADO</title>
+  <title>ACESSO PREMIUM LIBERADO</title>
   <style>
-    /* Explicação da estrutura e animações: 
-    - Quadro: Um container centralizado com borda 3px solid #e91e63 (rosa neon) e border-radius 20px para arredondado, fundo rgba(0,0,0,0.9) escuro semi-transparente. Fundo do body é linear-gradient(180deg, #000000, #1a0033) para vibe roxa noturna.
-    - Animações: Contagem regressiva com JavaScript setInterval atualizando o texto do timer a cada segundo, de 5 a 0. Quando zera, esconde timer com display:none e mostra liberado/sigilo/passo com display:block. Timer tem text-shadow 0 0 25px #ff0066 para glow neon vermelho. Emotes 🔥 são texto direto no HTML. Sem animações CSS avançadas, só transições simples via JS. Tudo igual ao screenshot, com frases exatas, emotes e cores neon para conversão alta. */
     body {
       margin: 0; padding: 0;
       background: linear-gradient(180deg, #000000, #1a0033);
@@ -34,6 +32,13 @@ ACESSO="pt-BR">
       color: #ff0066;
       margin: 10px 0 20px;
       text-shadow: 0 0 25px #ff0066;
+    }
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin: 15px 0 25px;
+      border: 2px solid #e91e63;
+      display: block;
     }
     .liberado {
       font-size: 26px;
@@ -74,16 +79,21 @@ ACESSO="pt-BR">
 </head>
 <body>
   <div class="container">
-    <h2>VOCE TEM 5 SEGUNDOS PARA ENTRAR NO GRUPINHO </h2>
+    <h2>VOCÊ TEM 5 SEGUNDOS PARA ENTRAR NA NUVEM PREMIUM</h2>
     
     <div id="timer">00:05</div>
 
+    <video controls autoplay loop muted playsinline>
+      <source src="SUA_MIDIA_AQUI" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
     <div class="liberado" id="liberado">
-      🔥 ACESSO AO LINK LIBERADO 🔥
+      🔥 ACESSO PRIVADO LIBERADO 🔥
     </div>
 
     <p class="sigilo" id="sigilo">
-      Entre com sigilo total e aproveite tudo.
+      Aproveite todo o conteúdo com sigilo total.
     </p>
 
     <p class="passo-final" id="passo">
@@ -93,7 +103,7 @@ ACESSO="pt-BR">
     <a href="https://linkpriv.com/1ec38631-15bb-4b46-9981-cce5654b6e9d" 
        id="btnAcesso" 
        class="btn">
-      ENTRAR NO GRUPO AGORA 🔥
+      QUERO ACESSAR AGORA 🔥
     </a>
   </div>
 
@@ -104,11 +114,6 @@ ACESSO="pt-BR">
     const sigiloEl = document.getElementById('sigilo');
     const passoEl = document.getElementById('passo');
     const btnEl = document.getElementById('btnAcesso');
-
-    liberadoEl.style.display = 'none';
-    sigiloEl.style.display = 'none';
-    passoEl.style.display = 'none';
-    btnEl.style.display = 'none';
 
     const intervalo = setInterval(() => {
       tempo--;
