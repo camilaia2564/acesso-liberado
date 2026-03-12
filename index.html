@@ -61,6 +61,22 @@
       font-weight: bold;
       display: none;
     }
+    /* Estilo para as imagens do tutorial */
+    .tutorial-img {
+      width: 90%;
+      max-width: 350px;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: none; /* Começa escondido */
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    /* Seta de indicação */
+    .seta {
+      font-size: 30px;
+      color: #ff0066;
+      display: none;
+      margin: 5px 0;
+    }
     .btn {
       display: none;
       width: 88%;
@@ -83,7 +99,7 @@
     
     <div id="timer">00:05</div>
 
-    <img src="https://ibb.co/Dg8GNpLQ" class="midia-container" alt="Mídia Premium">
+    <img src="https://i.ibb.co/Dg8GNpLQ/imagem.jpg" class="midia-container" alt="Mídia Premium">
 
     <div class="liberado" id="liberado">
       🔥 ACESSO PRIVADO LIBERADO 🔥
@@ -94,10 +110,14 @@
     </p>
 
     <p class="passo-final" id="passo">
-      PASSO FINAL: Toque nos 3 PONTOS acima e escolha ABRIR NO NAVEGADOR.
+      PASSO FINAL: Toque nos 3 PONTOS e escolha ABRIR NO NAVEGADOR.
     </p>
+    
+    <img src="https://i.ibb.co/68XkYmC/navegador-web.jpg" class="tutorial-img" id="img1" alt="Passo 1">
+    <div class="seta" id="seta">⬇️</div>
+    <img src="https://i.ibb.co/hWpG1p4/abrir-no-navegador.jpg" class="tutorial-img" id="img2" alt="Passo 2">
 
-    <a href="https://linkpriv.com/1ec38631-15bb-4b46-9981-cce5654b6e9d" 
+    <a href="LINK_DESTINO_FINAL_DO_USUARIO_SE_HOUVER" 
        id="btnAcesso" 
        class="btn">
       QUERO ACESSAR AGORA 🔥
@@ -110,6 +130,9 @@
     const liberadoEl = document.getElementById('liberado');
     const sigiloEl = document.getElementById('sigilo');
     const passoEl = document.getElementById('passo');
+    const img1El = document.getElementById('img1');
+    const setaEl = document.getElementById('seta');
+    const img2El = document.getElementById('img2');
     const btnEl = document.getElementById('btnAcesso');
 
     const intervalo = setInterval(() => {
@@ -122,6 +145,10 @@
         liberadoEl.style.display = 'block';
         sigiloEl.style.display = 'block';
         passoEl.style.display = 'block';
+        // Mostra o tutorial visual e o botão
+        img1El.style.display = 'block';
+        setaEl.style.display = 'block';
+        img2El.style.display = 'block';
         btnEl.style.display = 'block';
       }
     }, 1000);
