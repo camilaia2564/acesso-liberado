@@ -39,6 +39,8 @@
       margin: 15px 0 25px;
       border: 2px solid #e91e63;
       display: block;
+      /* Mantém o vídeo ajustado dentro da borda */
+      object-fit: cover; 
     }
     .liberado {
       font-size: 26px;
@@ -91,7 +93,10 @@
     
     <div id="timer">00:05</div>
 
-    <img src="https://i.postimg.cc/mD8Nf9y2/tutorial.jpg" class="midia-container" alt="Instruções de Acesso">
+    <video class="midia-container" autoplay loop muted playsinline>
+      <source src="https://files.catbox.moe/3lcjbf.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos.
+    </video>
 
     <div class="liberado" id="liberado">
       🔥 ACESSO PRIVADO LIBERADO 🔥
