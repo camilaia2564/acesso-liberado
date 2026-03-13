@@ -12,13 +12,13 @@
       color: white;
       text-align: center;
       min-height: 100vh;
-      overflow: hidden;
+      overflow-x: hidden;
     }
     .container {
       max-width: 420px;
       margin: 0 auto;
       padding: 20px 15px;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,6 +44,7 @@
       overflow: hidden;
       border: 2px solid #e91e63;
       margin: 15px 0 25px;
+      background: #000;
     }
     video {
       width: 100%;
@@ -66,7 +67,7 @@
     .passo-final {
       font-size: 14px;
       color: #ff0066;
-      margin-top: 30px;
+      margin-top: 20px;
       text-transform: uppercase;
       font-weight: bold;
       display: none;
@@ -83,6 +84,12 @@
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 0 30px #e91e63;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -113,7 +120,7 @@
     <a href="https://linkpriv.com/1ec38631-15bb-4b46-9981-cce5654b6e9d" 
        id="btnAcesso" 
        class="btn">
-      🔥 DESBLOQUEAR O ACESSO ⬇️
+      QUERO GARANTIR AGORA 🔥
     </a>
   </div>
 
@@ -124,11 +131,6 @@
     const sigiloEl = document.getElementById('sigilo');
     const passoEl = document.getElementById('passo');
     const btnEl = document.getElementById('btnAcesso');
-
-    liberadoEl.style.display = 'none';
-    sigiloEl.style.display = 'none';
-    passoEl.style.display = 'none';
-    btnEl.style.display = 'none';
 
     const intervalo = setInterval(() => {
       tempo--;
